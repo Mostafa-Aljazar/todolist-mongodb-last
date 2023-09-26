@@ -5,7 +5,7 @@ const getTopic = async (id)=>{
 
   const res =await fetch(`http://localhost:3000/api/topics/${id}`,{
     cache:"no-store"
-  });
+  }); 
   return await res.json();
 
 }

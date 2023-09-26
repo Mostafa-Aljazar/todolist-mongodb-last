@@ -3,11 +3,8 @@ import TodoItem from "./TodoItem";
 const getTopics = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/topics", {
-    
-      next:{
-        revalidate:0
-      }
-      
+    // const res = await fetch("./api/topics", {
+      cache:"no-store"  
     });
 
     if (!res.ok) {
@@ -29,7 +26,7 @@ const Todos = async () => {
       {
         items?.topics &&
         items?.topics.map((item) => {
-        return <TodoItem key={item?._id} item={item} />;
+        return (<TodoItem key={item?._id} item={item} />)
       })}
     </div>
   );
