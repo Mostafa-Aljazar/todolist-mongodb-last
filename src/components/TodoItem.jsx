@@ -1,5 +1,5 @@
 import React from "react";
-import DeleteItem from "./deleteItem";
+import DeleteItem from "./DeleteItem";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import Link from "next/link";
 
