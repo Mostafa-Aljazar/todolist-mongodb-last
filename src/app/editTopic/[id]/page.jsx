@@ -3,7 +3,8 @@ import React from 'react'
 
 const getTopic = async (id)=>{
 
-  const res =await fetch(`http://localhost:3000/api/topics/${id}`,{
+  const res =await fetch(`https://todolist-mongodb-last-kiij.vercel.app/api/topics/${id}`,{
+  // const res =await fetch(`http://localhost:3000/api/topics/${id}`,{
     cache:"no-store"
   }); 
   return await res.json();
