@@ -18,7 +18,8 @@ const UpdateForm = ({ params, topic }) => {
       return;
     }
 
-    const req = await fetch(`http://localhost:3000/api/topics/${params.id}`, {
+    // const req = await fetch(`http://localhost:3000/api/topics/${params.id}`, {
+    const req = await fetch(`https://todolist-mongodb-last-kiij.vercel.app/api/topics/${params.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
